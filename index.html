@@ -1,34 +1,35 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-      <title>ily ૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  background-image: url('kitty.gif');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; 
-  margin: 0;
-}
+  <title>ily ૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-image: url('kitty.gif');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; 
+      margin: 0;
+    }
 
-p {
-  text-align: center;
-  font-size: 60px;
-  font-family: "Comic Sans MS", cursive;
-  color: #FFE6EE;
-  margin: 0;
-}
-
-
-</style>
+    p {
+      text-align: center;
+      font-size: 60px;
+      font-family: "Comic Sans MS", cursive;
+      color: #FB9EBB;
+      text-shadow: 2px 2px 4px #8B004B;
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
 
-
+<audio id="bgMusic" autoplay loop>
+  <source src="your-actual-file-name.mp3" type="audio/mpeg">
+</audio>
 
 <p id="demo"></p>
 
@@ -59,6 +60,17 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "happy birthday i love you <3";
   }
 }, 1000);
+
+// Try to autoplay music, or start on first click/tap if blocked
+window.addEventListener("load", function() {
+  var music = document.getElementById("bgMusic");
+  
+  music.play().catch(function() {
+    document.addEventListener("click", function() {
+      music.play();
+    }, { once: true });
+  });
+});
 </script>
 
 </body>
