@@ -50,17 +50,22 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
-  // Output the result in an element with id="demo"
   document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
   
-  // If the count down is over, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "happy birthday i love you <3";
+    document.getElementById("demo").innerHTML = "happy birthday i love you <3
+      
+      If everyone born on your birthday date
+Were half as good as you,
+The world would be a paradise,
+Filled with love, so deep and true.
+
+But people who are just like you
+Are far and few";
   }
 }, 1000);
 
-// Try to autoplay music, or start on first click/tap if blocked
 window.addEventListener("load", function() {
   var music = document.getElementById("bgMusic");
   
